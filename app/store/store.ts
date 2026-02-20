@@ -2,7 +2,8 @@ import { defineStore } from 'pinia'
 export const useStore = defineStore('store', {
   state: () => ({ 
     products: [],
-    categories: []
+    categories: [],
+    users: []
   }),
   getters: {
     getProductBySlug: (state) => {
@@ -19,6 +20,12 @@ export const useStore = defineStore('store', {
     async getCategories() {
       try {
         this.categories = await $fetch('/api/categories')
+      } catch (e) {}
+    },
+
+    async getUsers() {
+      try {
+        this.users = await $fetch('/api/users')
       } catch (e) {}
     },
   },
