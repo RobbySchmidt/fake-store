@@ -12,6 +12,7 @@
   await Promise.all([
     store.getProducts(),
     store.getCategories(),
+    store.getUsers(),
   ])
 </script>
 
