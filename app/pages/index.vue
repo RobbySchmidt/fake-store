@@ -59,7 +59,7 @@
           </Card>
           <ProductCard
             v-else
-            v-if="filteredProducts" 
+            v-if="selectedProducts" 
             v-for="product in selectedProducts" 
             :data="product"/>
         </div>
